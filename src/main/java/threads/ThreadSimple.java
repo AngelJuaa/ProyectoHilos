@@ -13,23 +13,22 @@ import java.util.logging.Logger;
  */
 public class ThreadSimple extends Thread{
 
-    public ThreadSimple(String name) {
-        super(name);
-    }
-
+    
     
     @Override
     public void run() {
-        System.out.println("se inicia el metodo run del hilo: "+getName());
+        System.out.println("Se inicia el metodo run del Hilo  :" + getName());
         for (int i = 0; i < 100; i++) {
-            try {
-                Thread.sleep((long)(Math.random()*10));
-            } catch (InterruptedException ex) {
-                Logger.getLogger(ThreadSimple.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            System.out.println("hilo" +getName());
+            
+           
+            System.out.println("Hilo:"+ getName());
+            
         }
-        System.out.println("hilo finalizado.."+getName());
+        System.out.println("hilo finalizado" + getName());
+    }
+
+    public ThreadSimple(String name) {
+        super(name);
     }
     
     
